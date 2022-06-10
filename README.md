@@ -2,20 +2,23 @@
 
 A demo project developed to showcase my technical background in iOS development. This application is built using Swift and UIKit, following a custom MVVM architecture.
 
+
+## Demo
+See a demo video on youtube: https://youtu.be/4EAnOSsi7wM
+
+
+
 ## Getting Started
 
 The project can be built using XCode and run on a simulator or device with internet connection.
 
-### Installation
-
-The project has CocoaPods dependencies found in the podfile. Cocoapods needs to be installed on the macOS machine and do a pod install via the terminal.
-
+#### Running The App
 1. Clone the repository to your local maching
 ```
 git clone https://github.com/masterpaulo/wallet-test.git
 ```
 2. Open `wallet-test.xcodeproj` in XCode
-3. Run the project
+3. Build and run the project
 
 
 ## Testing
@@ -24,7 +27,7 @@ The application is integrated with a Mock API using [mockable.io](https://www.mo
 
 Feel free to start/stop any mocks available for testing different scenarios.
 
-#### API Request paths and their available mocks
+#### API paths and their available mocks
 ###### /wallets
 
 - GET /wallets (Status: 200 response) - returns a successful response with valid data
@@ -66,6 +69,7 @@ Both `id` and `amount` are accepted as **String** rather than **Int** or **Doubl
 
 #### Error Handling
 - The general error handling of the app is handled on the Network layer. Specifically the `RequestLoader` implementation. See [RequestLoader.swift](/wallet-test/Services/RequestLoader.swift)
+- API Error response data are parsed into JSON objects directly, rather than having a pre-defined model structure for the data. This is to consider different forms of JSON data structure for errors from the API. These uncertainties cannot be determined before-hand so it is more convenient to have a dynamic JSON type which can access the entire data format for any useful information like error messages and error codes.
 - For the Main screen implementation, both sections (My Wallet, Histories) have their own separate request loader. They are implemented to each have independent states to manage events inclusively . For the error state of the sections, the app provides a reload function to demonstrate how each of them can handle state management for their scope only.
 - The request loader process the response and returns a specific error type to the View Model layer, which is then used to describe what event/actions to do with it. Like logging in the console, or displaying a message to the user, or also possibly show an alert, etc.
 

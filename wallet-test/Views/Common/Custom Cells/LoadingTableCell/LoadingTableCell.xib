@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoadingTableCell" rowHeight="193" id="TCp-eK-MrO" customClass="LoadingTableCell" customModule="wallet_test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="527" height="193"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TCp-eK-MrO" id="J7e-LP-Trb">
+                <rect key="frame" x="0.0" y="0.0" width="527" height="193"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="htb-i9-lkF">
+                        <rect key="frame" x="20" y="11" width="487" height="171"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Bm1-B9-as8">
+                                <rect key="frame" x="0.0" y="0.0" width="487" height="171"/>
+                            </activityIndicatorView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fd2-8B-k7F">
+                                <rect key="frame" x="0.0" y="171" width="487" height="57"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ZAs-NF-Ygu">
+                                        <rect key="frame" x="80" y="0.0" width="327" height="57"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exclamationmark.triangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jfD-Qu-bkB">
+                                                <rect key="frame" x="141" y="1" width="45" height="43"/>
+                                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="45" id="D69-w7-hdQ"/>
+                                                    <constraint firstAttribute="height" constant="45" id="J1P-u4-Obl"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something went wrong" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mci-9P-EX4">
+                                                <rect key="frame" x="76" y="49" width="175.5" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unable to fetch data. Please try again later." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ol-Ar-1dO">
+                                                <rect key="frame" x="41.5" y="53" width="244" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qlv-Rj-6J8">
+                                                <rect key="frame" x="129.5" y="57" width="68.5" height="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Reload"/>
+                                                <connections>
+                                                    <action selector="reloadButtonAction:" destination="TCp-eK-MrO" eventType="touchUpInside" id="Bfb-0U-5bP"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ZAs-NF-Ygu" secondAttribute="bottom" id="3h1-o0-EMl"/>
+                                    <constraint firstItem="ZAs-NF-Ygu" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Fd2-8B-k7F" secondAttribute="top" id="TM6-C7-E6C"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZAs-NF-Ygu" secondAttribute="trailing" constant="80" id="c1g-fc-CI0"/>
+                                    <constraint firstItem="ZAs-NF-Ygu" firstAttribute="leading" secondItem="Fd2-8B-k7F" secondAttribute="leading" constant="80" id="k7i-yn-GGY"/>
+                                    <constraint firstItem="ZAs-NF-Ygu" firstAttribute="centerY" secondItem="Fd2-8B-k7F" secondAttribute="centerY" id="xh4-zg-W8I"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="htb-i9-lkF" secondAttribute="bottom" id="6JQ-Jt-War"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="htb-i9-lkF" secondAttribute="trailing" id="Czv-SB-cNn"/>
+                    <constraint firstItem="htb-i9-lkF" firstAttribute="top" secondItem="J7e-LP-Trb" secondAttribute="topMargin" id="I1o-sK-erb"/>
+                    <constraint firstItem="htb-i9-lkF" firstAttribute="leading" secondItem="J7e-LP-Trb" secondAttribute="leadingMargin" id="Ztd-JM-y1z"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="loadingIndicator" destination="Bm1-B9-as8" id="d9U-AA-TET"/>
+                <outlet property="messageContainerView" destination="Fd2-8B-k7F" id="lBf-TR-OZo"/>
+                <outlet property="messageLabel" destination="0ol-Ar-1dO" id="qAT-N2-Sgh"/>
+                <outlet property="reloadButton" destination="Qlv-Rj-6J8" id="Wxp-Sp-ebP"/>
+                <outlet property="titleLabel" destination="mci-9P-EX4" id="M7g-bf-Ue0"/>
+            </connections>
+            <point key="canvasLocation" x="384.78260869565219" y="97.433035714285708"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="exclamationmark.triangle" catalog="system" width="128" height="112"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

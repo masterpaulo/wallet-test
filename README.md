@@ -19,7 +19,7 @@ git clone https://github.com/masterpaulo/wallet-test.git
 ```
 2. Open `wallet-test.xcodeproj` in XCode
 3. Build and run the project
-
+> NOTE: If unable to build due to package dependencies. Please reset package cache by going to Xcodes menu **File -> Packages -> Reset Package Caches**
 
 ## Testing
 The application is integrated with a Mock API using [mockable.io](https://www.mockable.io/a/#/space/demo3902611/rest). A sample domain containing different mock responses for the API requests are pre-configured to aid in testing this application. You can access the space in the link below:
